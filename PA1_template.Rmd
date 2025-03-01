@@ -101,10 +101,13 @@ Data_imp <- Data_imp[,1:3]
 Tsteps_imp <- Data_imp %>% group_by(date) %>% summarise(total = sum(steps))
 
 hist(Tsteps_imp$total, xlab= "Number of steps", main = "Number of steps per day")
+
+```
+
+```{r}
 summary(Tsteps)
 summary(Tsteps_imp)
 ```
-
 Based on the results, the mean steps for the original and the imputated dataset are 9354 and 84188, respectively. The median steps for the original and the imputated dataset are 10395 and 11458, respectively.
 
 Imputating the missing data may overestimate the total daily number of steps.
@@ -134,3 +137,9 @@ par(mfrow=c(2,1), mar=c(5,4,1,1))
 ggplot(Tsteps_imp_DT, aes(interval, Mean))+geom_line()+xlab("5-minute interval")+ylab("average number of steps")+ggtitle("Average Daily Steps")+facet_grid(DayType~.)
 
 ```
+
+```{r}
+install.packages("rmarkdown")
+rmarkdown::render("PA1_template.Rmd")
+```
+
