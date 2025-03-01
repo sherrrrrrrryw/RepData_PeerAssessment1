@@ -112,7 +112,7 @@ hist(Tsteps_imp$total, xlab= "Number of steps", main = "Number of steps per day"
 summary(Tsteps)
 summary(Tsteps_imp)
 ```
-Based on the results, the mean steps for the original and the imputated dataset are 9354 and 84188, respectively. The median steps for the original and the imputated dataset are 10395 and 11458, respectively.
+Based on the results, the mean steps for the original and the imputated dataset are 9354 and 10395, respectively. The median steps for the original and the imputated dataset are 10766 and 10766, respectively.
 
 Imputating the missing data may overestimate the total daily number of steps.
 
