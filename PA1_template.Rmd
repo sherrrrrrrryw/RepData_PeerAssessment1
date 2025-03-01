@@ -6,7 +6,8 @@ output:
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(warning = FALSE, message = FALSE)
- 
+Sys.setlocale("LC_TIME", "English")
+
 ```
 
 ## Loading and preprocessing the data
